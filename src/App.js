@@ -9,7 +9,9 @@ import Register from './Components/Register&Login/Register.js'
 import Login from './Components/Register&Login/Login'
 import Footer from './Components/Footer/Footer';
 import AuthProvider from './context/AuthProvider';
-import {
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import 
+{
   BrowserRouter as Router,
   Switch,
   Route,
@@ -33,9 +35,10 @@ function App() {
           <Route  path="/about">
             <About></About>
           </Route>
-          <Route  path="/products">
-            <Products></Products>
-          </Route>
+          <PrivateRoute path="/products">
+          <Products></Products>
+          </PrivateRoute>
+         
           <Route   path="/register">
             <Register></Register>
           </Route>
